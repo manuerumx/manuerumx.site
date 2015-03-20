@@ -20,6 +20,16 @@
     
 	<!-- Custom styles CSS -->
 	<link href="assets/css/style.css" rel="stylesheet" media="screen">
+    <style>
+        .btnAnimation{
+            cursor:pointer;
+            color:#c3c3c3;
+            left:5px;
+            bottom:10px;
+            position: absolute;
+            font-size:10px;
+        }
+    </style>
 
 </head>
 <body>
@@ -33,7 +43,9 @@
 	<!-- Home start -->
 
 	<section id="home" class="pfblock-image screen-height">
-        <div class="home-overlay"></div>
+        <div class="home-overlay">
+            <canvas id="demo-canvas"></canvas>
+        </div>
 		<div class="intro">
 			<div class="start">Hello, my name is Manuel González and I am</div>
 			<h1>Web Developer</h1>
@@ -47,6 +59,7 @@
             </span>
 		</div>
         </a>
+        <span id="stopAnimation" class="btnAnimation">Stop animation</span>
 
 	</section>
 
@@ -527,6 +540,7 @@
     <script src="assets/js/waypoints.min.js"></script>
     <script src="assets/js/jquery.cbpQTRotator.js"></script>
 	<script src="assets/js/custom.js"></script>
-
+    <script src="assets/js/rAF.js"></script>
+    <script src="assets/js/background.js"></script>
 </body>
 </html>
