@@ -101,7 +101,7 @@
             ctx.beginPath();
             ctx.fillStyle = 'rgba(255,255,255,'+ _this.alpha+')';
             ctx.font = _this.font;
-			ctx.fillText(_this.mytext,_this.pos.x, _this.pos.y);
+            ctx.fillText(_this.mytext,_this.pos.x, _this.pos.y);
             ctx.fill();
         };
     }
