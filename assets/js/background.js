@@ -49,12 +49,11 @@
     function stopAnim(){
         if(animateHeader){
             animateHeader = false;
-            document.getElementById('stopAnimation').innerHTML= 'Start animation';
+            document.getElementById('stopAnimation').innerHTML= '<i class="fa fa-play fa-2x"></i>';
         }else{
             animateHeader = true;
-            document.getElementById('stopAnimation').innerHTML= 'Stop animation';
+            document.getElementById('stopAnimation').innerHTML= '<i class="fa fa-pause fa-2x"></i>';
         }
-        initHeader();
     }
 
     function animate() {
@@ -70,11 +69,17 @@
     // Canvas manipulation
     function Circle() {
         var _this = this;
-        var _elements = ['<code>','</code>','if(!x)','var n=0;', '<?php','echo $var;'];
+        var _elements = ['<script>','</script>',
+            'Math.random()*width','var n=0;', '<?php ?>','echo $var;', 'phpinfo();',
+            'private $password','static public function Connect()',
+            '$(document).ready', '$args = array();', '$xml = new DomDocument();'
+        ];
+        var _fontsize = ['7pt','8pt','9pt','10pt', '6pt'];
         // constructor
         (function() {
             _this.pos = {};
             init();
+
         })();
 
         function init() {
@@ -83,7 +88,8 @@
             _this.alpha = 0.1+Math.random()*0.3;
             //_this.scale = 0.1+Math.random()*0.3;
             _this.velocity = Math.random();
-            _this.mytext = _elements[Math.floor((Math.random() * 5))];
+            _this.mytext = _elements[Math.floor((Math.random() * (_elements.length-1) ))];
+            _this.font = 'italic bold ' +  _fontsize[Math.floor((Math.random() * (_elements.length-1) ))] + ' Consolas';
         }
 
         this.draw = function() {
@@ -93,9 +99,8 @@
             _this.pos.y -= _this.velocity;
             _this.alpha -= 0.0005;
             ctx.beginPath();
-            // ctx.arc(_this.pos.x, _this.pos.y, _this.scale*10, 0, 2 * Math.PI, false);
             ctx.fillStyle = 'rgba(255,255,255,'+ _this.alpha+')';
-            ctx.font = "italic bold 7pt Consolas";
+            ctx.font = _this.font;
 			ctx.fillText(_this.mytext,_this.pos.x, _this.pos.y);
             ctx.fill();
         };
