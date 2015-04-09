@@ -3,7 +3,7 @@
     Options +FollowSymLinks
     RewriteCond %{http_host} ^manueru.mx [NC]
     RewriteRule ^(.*)$ http://www.manueru.mx/$1 [r=301,NC]
-    RewriteCond %{HTTP_REFERER} (?:o-o-6-o-o|bestwebsitesawards|simple-share-buttons|see-your-website-here|forum.topic55198628.darodar|hulfingtonpost|ilovevitaly|priceg|blackhatworth|semalt.semalt|kambasoft|buttons-for-website|BlackHatWorth|7makemoneyonline)\.com [NC,OR]
+    RewriteCond %{HTTP_REFERER} (?:o-o-6-o-o|site18.simple-share-buttons|bestwebsitesawards|simple-share-buttons|see-your-website-here|forum.topic55198628.darodar|hulfingtonpost|ilovevitaly|priceg|blackhatworth|semalt.semalt|kambasoft|buttons-for-website|BlackHatWorth|7makemoneyonline)\.com [NC,OR]
     RewriteCond %{HTTP_REFERER} (?:lomb|lombia|econom|lumb)\.co [NC,OR]
     RewriteCond %{HTTP_REFERER} (?:cenoval|Iskalko)\.ru [NC,OR]
     RewriteCond %{HTTP_REFERER} (?:smailik|humanorightswatch)\.org [NC,OR]
