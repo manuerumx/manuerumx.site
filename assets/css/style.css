@@ -391,7 +391,7 @@ textarea.form-control {
 }
 
 /* ---------------------------------------------- /*
- * Servise
+ * Service
 /* ---------------------------------------------- */
 
 .iconbox {
@@ -400,6 +400,7 @@ textarea.form-control {
 	text-align: center;
 	padding: 40px 20px;
 	margin: 0 0 20px;
+    min-height: 300px !important;
 }
 
 .iconbox-icon {
@@ -679,12 +680,21 @@ textarea.form-control {
 /* ---------------------------------------------- /*
  * Media
 /* ---------------------------------------------- */
+@media (max-width: 1990px) {
+    .iconbox{
+        min-height: 330px !important;
+    }
+
+}
 
 @media (max-width: 767px) {
 
 	.calltoaction {
 		text-align: center;
 	}
+    .iconbox{
+        min-height: 120px !important;
+    }
 
 }
 
@@ -700,6 +710,9 @@ textarea.form-control {
 		margin: 0 0 30px;
 		letter-spacing: 3px;
 	}
+    .iconbox{
+        min-height: 120px !important;
+    }
 
 }
 
