@@ -72,7 +72,8 @@
         var _elements = ['<script>','</script>',
             'Math.random()*width','var n=0;', '<?php ?>','echo $var;', 'phpinfo();',
             'private $password','static public function Connect()',
-            '$(document).ready', '$args = array();', '$xml = new DomDocument();'
+            '$(document).ready', '$args = array();', '$xml = new DomDocument();', 'element.push(obj);',
+            '@media (max-width: 767px){.myname{font-size:0.5em;}}'
         ];
         var _fontsize = ['7pt','8pt','9pt','10pt', '6pt'];
         // constructor
