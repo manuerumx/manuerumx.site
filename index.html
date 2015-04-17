@@ -17,6 +17,7 @@
 	<link href="assets/css/font-awesome.min.css" rel="stylesheet" media="screen">
 	<link href="assets/css/simple-line-icons.css" rel="stylesheet" media="screen">
 	<link href="assets/css/animate.css" rel="stylesheet">
+    <link href="assets/css/jqcloud.css" rel="stylesheet">
     
 	<!-- Custom styles CSS -->
 	<link href="assets/css/style.css" rel="stylesheet" media="screen">
@@ -28,6 +29,18 @@
             bottom:10px;
             position: absolute;
             font-size:10px;
+        }
+        #wordcloud {
+            margin: 5px auto;
+            width: 100%;
+            height: 100px;
+            border: none;
+        }
+        #wordcloud span.w10, #wordcloud span.w9, #wordcloud span.w8, #wordcloud span.w7 {
+            text-shadow: 0px 1px 1px #ccc;
+        }
+        #wordcloud span.w3, #wordcloud span.w2, #wordcloud span.w1 {
+            text-shadow: 0px 1px 1px #fff;
         }
     </style>
     <script>
@@ -81,7 +94,7 @@
 				<div class="collapse navbar-collapse" id="custom-collapse">
 					<ul class="nav navbar-nav navbar-right">
 						<li><a href="#home">Home</a></li>
-						<li><a href="#services">I Do</a></li>
+						<li><a href="#services">What i do</a></li>
                         <li><a href="#portfolio">Works</a></li>
                         <li><a href="#skills">Skills</a></li>
                         <li><a href="#aboutme">About Me</a></li>
@@ -281,7 +294,8 @@
                                 <h2 class="pfblock-title">My Skills</h2>
                                 <div class="pfblock-line"></div>
                                 <div class="pfblock-subtitle">
-                                    No one lights a lamp in order to hide it behind the door: the purpose of light is to create more light, to open people’s eyes, to reveal the marvels around.
+                                    A list of my skills I have more experience and enjoy working and others which also
+                                    I have knowledge and experience but have dusty from disuse.
                                 </div>
                             </div>
                         </div>
@@ -313,6 +327,11 @@
                             <h3 class="text-center">HTML/CSS</h3>
                             <h6><em>And growing</em></h6>
                         </div>
+                    </div>
+                    <div class="row text-center">
+                        <div class="pfblock-line"></div>
+                        <h4 class="pfblock-title">Other skills cloud</h4>
+                        <div id="wordcloud"></div>
                     </div>
 				</div><!--End row -->
 			</div>
@@ -465,7 +484,24 @@
 	<script src="assets/js/custom.js"></script>
     <script src="assets/js/rAF.js"></script>
     <script src="assets/js/background.js"></script>
+    <script src="assets/js/jqcloud-1.0.4.min.js"></script>
 <script>
+    var word_list = new Array(
+            {text: "jQuery", weight:7},
+            {text: "Bootstrap", weight:6.9},
+            {text: "Git", weight:7},
+            {text: "SVN", weight:4},
+            {text: "Python", weight:4},
+            {text: "Node.js", weight:5},
+            {text: "Java", weight:3},
+            {text: "MVC", weight:7},
+            {text: "SQL Server", weight:7},
+            {text: "Oracle", weight:6.8},
+            {text: "C#", weight:6.5},
+            {text:"VB.NET", weight:6},
+            {text:"VB 6", weight:3},
+            {text:"ASP Classic", weight:3}
+    );
     $(document).ready(function() {
         $(".meter > span").each(function() {
             $(this)
@@ -475,6 +511,7 @@
                     width: $(this).data("origWidth")
                 }, 1200);
         });
+        $("#wordcloud").jQCloud(word_list);
     });
 </script>
 </body>
