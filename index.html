@@ -3,10 +3,10 @@
 <head>
 	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="description" content="Manueru is Full Stack Web Developer with 12 years of experience. He likes to contribute to create a new, modern and responsive web using the latest technologies">
-    <meta name="keywords" content="Personal Web Page Full Stack Web Developer PHP Analysis HTML5 CSS3 ">
+    <meta name="description" content="I am Full-stack web developer with 12 years of experience. I likes to contribute to create a new, modern and responsive web using the latest technologies">
+    <meta name="keywords" content="Personal Web Page Full-stack Web Developer PHP Analysis HTML5 CSS3 Mexico Database Front-end Back-end Data Project Analyst">
     <meta name="author" content="Manuel Gonzalez <manuerumx>">
-	<title>Manueru.mx - Manuel González - Full Stack Web Developer</title>
+	<title>Manueru.mx - Manuel González - Full-stack Web Developer</title>
     <!-- Google Fonts -->
     <link href="http://fonts.googleapis.com/css?family=Raleway:500,700,800,400,300" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet" type="text/css">
@@ -14,33 +14,10 @@
 	<link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
 	<link href="assets/css/font-awesome.min.css" rel="stylesheet" media="screen">
 	<link href="assets/css/simple-line-icons.css" rel="stylesheet" media="screen">
-	<link href="assets/css/animate.css" rel="stylesheet">
-    <link href="assets/css/jqcloud.css" rel="stylesheet">
-    
+	<link href="assets/css/animate.css" rel="stylesheet" media="screen">
+    <link href="assets/css/jqcloud.css" rel="stylesheet" media="screen">
 	<!-- Custom styles CSS -->
 	<link href="assets/css/style.css" rel="stylesheet" media="screen">
-    <style>
-        .btnAnimation{
-            cursor:pointer;
-            color:#c3c3c3;
-            left:5px;
-            bottom:10px;
-            position: absolute;
-            font-size:10px;
-        }
-        #wordcloud {
-            margin: 5px auto;
-            width: 100%;
-            height: 100px;
-            border: none;
-        }
-        #wordcloud span.w10, #wordcloud span.w9, #wordcloud span.w8, #wordcloud span.w7 {
-            text-shadow: 0px 1px 1px #ccc;
-        }
-        #wordcloud span.w3, #wordcloud span.w2, #wordcloud span.w1 {
-            text-shadow: 0px 1px 1px #fff;
-        }
-    </style>
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -194,16 +171,11 @@
                             more light, to open people’s eyes, to reveal the marvels around.
 						</div>
 					</div>
-
 				</div>
-
 			</div><!-- .row -->
 
-
             <div class="row">
-
                 <div class="col-xs-12 col-sm-4 col-md-4">
-
                     <div class="grid wow zoomIn">
                         <figure class="effect-bubba">
                             <img src="assets/images/item-1.jpg" alt="img01" height="225" width="360"/>
@@ -213,11 +185,8 @@
                             </figcaption>
                         </figure>
                     </div>
-
                 </div>
-
                 <div class="col-xs-12 col-sm-4 col-md-4">
-
                     <div class="grid wow zoomIn">
                         <figure class="effect-bubba">
                             <img src="assets/images/item-2.jpg" alt="img01" height="225" width="360"/>
@@ -452,8 +421,7 @@
                     </p>
                     <p class="copyright">
                         © 2015 Manuel Gonzalez | Images: <a href="https://unsplash.com/">Unsplash</a> & <a href="http://zoomwalls.com/">Zoomwalls</a>
-					</p>
-                    <p>Template by <a href="http://scripteden.com/download/clean-one-page-personal-portfolio-template/" target="_blank">@alex</a></p>
+					| Template by <a href="http://scripteden.com/download/clean-one-page-personal-portfolio-template/" target="_blank">@alex</a></p>
 
 				</div>
 
@@ -503,12 +471,7 @@
     );
     $(document).ready(function() {
         $(".meter > span").each(function() {
-            $(this)
-                .data("origWidth", $(this).width())
-                .width(0)
-                .animate({
-                    width: $(this).data("origWidth")
-                }, 1200);
+            $(this).data("origWidth", $(this).width()).width(0).animate({width: $(this).data("origWidth")}, 1200);
         });
         $("#wordcloud").jQCloud(word_list);
     });
