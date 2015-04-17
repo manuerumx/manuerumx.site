@@ -9,6 +9,8 @@
     RewriteCond %{HTTP_REFERER} (?:smailik|humanorightswatch)\.org [NC,OR]
     RewriteCond %{HTTP_REFERER} (?:ranksonic|savetubevideo)\.info [NC]
     RewriteRule ^ – [F]
+    RewriteCond %{HTTP_USER_AGENT} libwww-perl.*
+    RewriteRule .* – [F,L]
 </IfModule>
 
 <IfModule mod_expires.c>
