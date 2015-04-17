@@ -1011,3 +1011,10 @@ and (max-device-width : 1024px)  {
     }
 }
 
+.todo{margin-top:5px;}
+.todo > li{
+    margin-bottom: 5px;
+}
+.nope{
+    color:#FFFFFF !important;
+}
